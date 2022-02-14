@@ -1,0 +1,8 @@
+npm init -y
+npm i --save-dev typescript
+npm i --save-dev ts-node 
+npm i --save-dev @types/node
+npx tsc --init
+Add a build script to your package.json file "build": "npx tsc"
+npm run build
+node build/.
