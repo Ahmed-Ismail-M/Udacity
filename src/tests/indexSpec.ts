@@ -1,6 +1,6 @@
 
-import { myfunc } from '../index'
+import myfunc from '../index'
 
 it('expect myfunc() to equal hello', () => {
-  expect(myfunc()).toEqual('hello');
+  expect(myfunc()).toEqual('Hello');
 });

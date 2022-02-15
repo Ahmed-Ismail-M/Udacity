@@ -5,6 +5,7 @@ npm i --save-dev @types/node
 npm i --save-dev @types/jasmine
 npm i jasmine
 npm i jasmine-spec-reporter
+npx jasmine init # create conf file
 npx tsc --init
 Add a build script to your package.json file "build": "npx tsc"
 npm run build
