@@ -3,6 +3,9 @@ import arrays from './utilities/arrays.js'
 import numbers from './utilities/numbers.js'
 import strings from './utilities/strings.js'
 
+export const myfunc = (): string => {
+  return 'Hello'
+};
 const numArr: number[] = [3, 4, 5, 6]
 const wordArr: string[] = ['cat', 'dog', 'rabbit', 'bird']
 const arrSum = arrays.addArr(numArr)

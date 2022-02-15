@@ -40,5 +40,5 @@ exports.default = {
     concatArr: concatArr,
     addArr: addArr,
     lgNum: lgNum,
-    cut3: cut3,
+    cut3: cut3
 };

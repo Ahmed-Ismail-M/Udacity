@@ -240,7 +240,7 @@ var main = function () {
                     }
                     _b.label = 10;
                 case 10:
-                    if (menuChoice != 0) return [3 /*break*/, 0];
+                    if (menuChoice !== 0) return [3 /*break*/, 0];
                     _b.label = 11;
                 case 11:
                     // end readline process
