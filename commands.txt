@@ -2,6 +2,9 @@ npm init -y
 npm i --save-dev typescript
 npm i --save-dev ts-node 
 npm i --save-dev @types/node
+npm i --save-dev @types/jasmine
+npm i jasmine
+npm i jasmine-spec-reporter
 npx tsc --init
 Add a build script to your package.json file "build": "npx tsc"
 npm run build
