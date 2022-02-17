@@ -16,16 +16,16 @@ async function resizeImage (
       height: parseInt(req.query.height as string) as number,
       width: parseInt(req.query.width as string) as number
     }
-    const dir: string = 'thumb'
+    const resizeDir: string = 'thumb'
     const imagename: string = path.parse(newImageProps.imageName).name
     const extension: string = path.parse(newImageProps.imageName).ext
     const output: string = path.join(
       __dirname,
-      dir,
+      resizeDir,
       `${imagename}_${newImageProps.height}x${newImageProps.width}${extension}`
     )
     try {
-      createDir(path.join(__dirname, dir))
+      createDir(path.join(__dirname, resizeDir))
       await sharp(newImageProps.imageName)
         .resize({
           width: newImageProps.width,
