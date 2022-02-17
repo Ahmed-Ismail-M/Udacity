@@ -1,6 +1,10 @@
 import express from 'express'
 
-export const logger = (req: express.Request, res: express.Response, next: Function): void => {
+export const logger = (
+  req: express.Request,
+  res: express.Response,
+  next: Function
+): void => {
   const url = req.url
   const vipd = req.ip
   const host = req.hostname
@@ -10,11 +14,11 @@ export const logger = (req: express.Request, res: express.Response, next: Functi
 
   next()
 }
-export function asyncWrapper (fn: Function) {
-  return (req: express.Request, res: express.Response, next: Function) => {
-    return Promise.resolve(fn(req))
-      .then((result) => res.send(result))
-      .catch((err) => next(err))
-  }
-}
-// export default { logger, asyncWrapper };
+// export function asyncWrapper (fn: Function) {
+//   return (req: express.Request, res: express.Response, next: Function) => {
+//     return Promise.resolve(fn(req))
+//       .then((result) => res.send(result))
+//       .catch((err) => next(err))
+//   }
+// }
+// // export default { logger, asyncWrapper };

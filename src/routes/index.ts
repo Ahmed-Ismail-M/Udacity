@@ -1,4 +1,4 @@
-import express from 'express';
+import express from 'express'
 import imgResize from './api/img'
 
 const routes = express.Router()
@@ -7,4 +7,4 @@ routes.get('/', (req, res) => {
 })
 routes.use('/resize', imgResize)
 
-export default routes;
+export default routes
