@@ -32,10 +32,10 @@ async function resizeImage (
         })
         .toFile(output)
         .then(() => {
-          res.sendFile(output)
+          res.status(200).sendFile(output)
         })
         .catch((err) => {
-          res.send(`${err}`)
+          res.status(500).send(`${err}`)
         })
     } catch (error) { res.send(`${error}`) }
   } else {
