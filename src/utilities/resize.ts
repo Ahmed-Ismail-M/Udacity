@@ -13,11 +13,15 @@ async function resizeImage (
     const fileName: string = req.query.filename as string
     const height: number = parseInt(req.query.height as string) as number
     const width: number = parseInt(req.query.width as string) as number
-    const inputPath : string = path.join('assets', fileName)
+    const inputPath: string = path.join('assets', fileName)
     const resizeDir: string = 'thumb'
     const imagename: string = path.parse(fileName).name
     // const extension: string = path.parse(fileName).ext
-    const output: string = path.join(process.cwd(), resizeDir, fileName.replace(imagename, imagename + '-' + height + 'x' + width))
+    const output: string = path.join(
+      process.cwd(),
+      resizeDir,
+      fileName.replace(imagename, imagename + '-' + height + 'x' + width)
+    )
     // const output: string = path.join(
     //   __dirname,
     //   resizeDir,
@@ -37,7 +41,9 @@ async function resizeImage (
         .catch((err) => {
           res.status(500).send(`${err}`)
         })
-    } catch (error) { res.send(`${error}`) }
+    } catch (error) {
+      res.send(`${error}`)
+    }
   } else {
     res.send(`Post image info with parameters ${neededParams}`)
   }

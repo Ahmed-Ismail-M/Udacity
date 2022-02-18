@@ -8,7 +8,7 @@ const port: number = 8000
 const staticCashe = Express.static(path.join(process.cwd(), 'assets'), {
   maxAge: 90000000
 })
-const middleware = [staticCashe, logger];
+const middleware = [staticCashe, logger]
 app.use(middleware)
 app.use('/api', routes)
 app.use(errHandler)
