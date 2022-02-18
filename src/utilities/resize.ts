@@ -16,14 +16,15 @@ async function resizeImage (
     const inputPath : string = path.join('assets', fileName)
     const resizeDir: string = 'thumb'
     const imagename: string = path.parse(fileName).name
-    const extension: string = path.parse(fileName).ext
-    const output: string = path.join(
-      __dirname,
-      resizeDir,
-      `${imagename}_${height}x${width}${extension}`
-    )
+    // const extension: string = path.parse(fileName).ext
+    const output: string = path.join(process.cwd(), resizeDir, fileName.replace(imagename, imagename + '-' + height + 'x' + width))
+    // const output: string = path.join(
+    //   __dirname,
+    //   resizeDir,
+    //   `${imagename}_${height}x${width}${extension}`
+    // )
     try {
-      createDir(path.join(__dirname, resizeDir))
+      createDir(path.join(process.cwd(), resizeDir))
       await sharp(inputPath)
         .resize({
           width: width,
@@ -31,7 +32,7 @@ async function resizeImage (
         })
         .toFile(output)
         .then(() => {
-          res.sendFile(output, 'Your img resized !!')
+          res.sendFile(output)
         })
         .catch((err) => {
           res.send(`${err}`)
