@@ -22,4 +22,4 @@ Make Sure the image is located at /assets
   <li>
 Provide the required info as below <br>http://'host name'/api/resize?filename=imagename.extension&height=+number&width=+number
 </li>
-<li>Find the required output in /thum</li>
+<li>Find the required output in /thumb</li>
