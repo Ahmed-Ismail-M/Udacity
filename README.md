@@ -20,6 +20,6 @@ A simple app that resizes images
 Make Sure the image is located at dir/assets 
   </li>
   <li>
-Provid the required info as below <br>http://'host name'/api/resize?filename=imagename.extension&height=+number&width=+number
+Provide the required info as below <br>http://'host name'/api/resize?filename=imagename.extension&height=+number&width=+number
 </li>
 <li>Find the required output in dir/thum</li>
