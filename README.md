@@ -17,9 +17,9 @@ A simple app that resizes images
        Go to http://'host name'/api/resize
   </li>  
   <li>
-Make Sure the image is located at dir/assets 
+Make Sure the image is located at /assets 
   </li>
   <li>
 Provide the required info as below <br>http://'host name'/api/resize?filename=imagename.extension&height=+number&width=+number
 </li>
-<li>Find the required output in dir/thum</li>
+<li>Find the required output in /thum</li>
