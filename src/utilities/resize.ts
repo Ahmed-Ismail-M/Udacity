@@ -53,7 +53,7 @@ async function resizeImage (
     // if the paramters provided dont satisfy the needed parameters
   } else {
     // resend a message asking for them
-    res.send(`Post image info with parameters ${neededParams}`)
+    res.status(500).send(`Post image info with parameters ${neededParams}`)
   }
 }
 function createDir (dir: string): void {
