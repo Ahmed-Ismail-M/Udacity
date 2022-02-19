@@ -6,11 +6,11 @@ export const logger = (
   next: Function
 ): void => {
   const url = req.url
-  const vipd = req.ip
+  const vipd = req.ip.replace('::fff:', '')
   const host = req.hostname
   const method = req.method
-  const body = req.body
-  console.log(`${method} ${host}${url} by ${vipd} ${body}`)
+  const status = res.statusCode
+  console.log(method + ' ' + status + ' ' + host + url + ' ' + vipd + ' ' + Date())
 
   next()
 }
