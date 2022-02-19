@@ -10,7 +10,7 @@ async function resizeImage (
 ): Promise<void> {
   // define needed paramters
   const neededParams: string[] = ['filename', 'height', 'width']
-  // if the paramters are provided available
+  // if the paramters are provided
   if (neededParams.every((key) => Object.keys(req.query).includes(key))) {
     // define the values and parse to the correct type
     const fileName: string = req.query.filename as string
