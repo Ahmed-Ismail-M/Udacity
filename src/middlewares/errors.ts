@@ -1,7 +1,7 @@
+import type { ErrorRequestHandler } from 'express'
 import express from 'express'
-
-const errHandler = (
-  err: String,
+const errHandler: ErrorRequestHandler = (
+  err: unknown,
   req: express.Request,
   res: express.Response,
   next: Function

@@ -1,4 +1,4 @@
-import { resizeImage, createDir } from '../../utilities/resize';
+import { resizeImage, createDir } from '../../utilities/resize'
 import { imagePorp } from '../../interfaces/image'
 const path = require('path')
 
