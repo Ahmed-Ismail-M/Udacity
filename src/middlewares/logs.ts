@@ -25,4 +25,3 @@ export function asyncWrapper (fn: Function) {
     )
   }
 }
-// // export default { logger, asyncWrapper };

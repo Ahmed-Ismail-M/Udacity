@@ -3,7 +3,7 @@ import { resizeImage, createDir } from '../../utilities/resize'
 import { imagePorp } from '../../interfaces/image'
 import { asyncWrapper } from '../../middlewares/logs'
 import path from 'path'
-const imgResize = express.Router()
+const imgResize: express.Router = express.Router()
 const fs = require('fs')
 imgResize.get(
   '/',
