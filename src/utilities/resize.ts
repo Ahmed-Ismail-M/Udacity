@@ -6,6 +6,7 @@ async function resizeImage (imgprop: imagePorp): Promise<string> {
   // get the required image from assets path
 
   return new Promise((resolve, reject) => {
+    console.log(imgprop.input)
     sharp(imgprop.input)
       .resize({
         width: imgprop.width,
