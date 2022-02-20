@@ -7,7 +7,7 @@ import path from 'path'
 const app: Express.Application = Express()
 const port: number = 8000
 const staticCashe = Express.static(path.join(process.cwd(), 'assets'), {
-  maxAge: 90000000
+  maxAge: 90000000,
 })
 const middleware = [staticCashe, logger, Express.json()]
 app.use(middleware)

@@ -31,7 +31,7 @@ imgResize.get(
           input: inputPath,
           height: height,
           width: width,
-          output: output
+          output: output,
         }
 
         // if the output already exists return it

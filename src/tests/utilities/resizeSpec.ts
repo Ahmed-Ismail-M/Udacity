@@ -6,31 +6,31 @@ const imgprop: imagePorp = {
   input: path.resolve('assets/encenadaport.jpg'),
   height: 200,
   width: 300,
-  output: path.resolve('thumb/encenadaport-200x300.jpg')
+  output: path.resolve('thumb/encenadaport-200x300.jpg'),
 }
 const imgwronginp: imagePorp = {
   input: path.resolve('encenadaport.jpg'),
   height: 200,
   width: 300,
-  output: path.resolve('thumb/encenadaport-200x300.jpg')
+  output: path.resolve('thumb/encenadaport-200x300.jpg'),
 }
 const imgwrongout: imagePorp = {
   input: path.resolve('assets/encenadaport.jpg'),
   height: 200,
   width: 300,
-  output: path.resolve('thum/encenadaport-200x300.jpg')
+  output: path.resolve('thum/encenadaport-200x300.jpg'),
 }
 const imgwrongh: imagePorp = {
   input: path.resolve('assets/encenadaport.jpg'),
   height: -1,
   width: 300,
-  output: path.resolve('thumb/encenadaport-200x300.jpg')
+  output: path.resolve('thumb/encenadaport-200x300.jpg'),
 }
 const imgwrongw: imagePorp = {
   input: path.resolve('assets/encenadaport.jpg'),
   height: 200,
   width: -1,
-  output: path.resolve('thumb/encenadaport-200x300.jpg')
+  output: path.resolve('thumb/encenadaport-200x300.jpg'),
 }
 describe('Test resize image', () => {
   beforeAll(() => createDir(path.join(process.cwd(), 'thumb')))
