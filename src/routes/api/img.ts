@@ -40,7 +40,7 @@ imgResize.get(
         }
         // else will generate new one and save to output directory
         try {
-          // create thum director if dosnt exists
+          // create thumb director if dosnt exists
           createDir(path.join(process.cwd(), resizeDir))
           const resized: string = await resizeImage(imgprop)
           res.status(200).sendFile(resized)

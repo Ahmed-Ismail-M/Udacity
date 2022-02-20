@@ -1,4 +1,4 @@
-import { resizeImage } from '../../utilities/resize';
+import { resizeImage, createDir } from '../../utilities/resize';
 import { imagePorp } from '../../interfaces/image'
 const path = require('path')
 
@@ -22,7 +22,7 @@ const imgwrongout: imagePorp = {
 }
 const imgwrongh: imagePorp = {
   input: path.resolve('assets/encenadaport.jpg'),
-  height: -1 ,
+  height: -1,
   width: 300,
   output: path.resolve('thumb/encenadaport-200x300.jpg')
 }
@@ -33,6 +33,7 @@ const imgwrongw: imagePorp = {
   output: path.resolve('thumb/encenadaport-200x300.jpg')
 }
 describe('Test resize image', () => {
+  beforeAll(() => createDir(path.join(process.cwd(), 'thumb')))
   it('should resize image without error', async function () {
     await expectAsync(resizeImage(imgprop)).toBeResolvedTo(imgprop.output)
   })
