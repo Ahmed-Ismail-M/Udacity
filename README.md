@@ -1,4 +1,4 @@
-# ImageResizer
+# ImgResizer
 ## About The Project
 A simple app that resizes images
 
