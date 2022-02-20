@@ -1,6 +1,11 @@
-import { ErrorRequestHandler } from 'express'
+import express from 'express'
 
-const errHandler: ErrorRequestHandler = (err, req, res, next) => {
+const errHandler = (
+  err: String,
+  req: express.Request,
+  res: express.Response,
+  next: Function
+): express.Response => {
   console.error('uncaught exception', err)
   return res.status(500).send('an unexpected error has occured ')
 }
